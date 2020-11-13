@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+   
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
+
+</head>
+<style>
+    .form-control{
+ border-color: #dc3545;
+  border-radius: 4px;
+    }
+</style>
+
+
+<body>
+    
+   
+    <div class="container-fluid p-0 bg-background">
+        <div class="main-container">
+            
+
+            <div class="content-area container">
+                <div class="row">
+                    <div class="main-flex">
+                        <div class="signup-form">
+                            <div class="top-head">
+                                <h4>Number Convertor </h4>
+                            </div>
+                            
+                           
+                                
+
+                                <div class="form-group">
+                                    <form method="POST" action="/register" enctype="multipart/form-data" >
+                                        {% csrf_token %}
+                                    <label>Please Enter Number</label>
+                                    <div class="">
+                                        <input class="form-control " placeholder="Place Enter Number" name="number" type="Number" required>
+                                    
+
+                                    </div>
+                                </div>
+<textarea style="width: 250px;">
+{{x}}
+</textarea>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block btn-signup">Sign Up</button>
+                                </div>
+                            </form>
+
+
+                            
+
+
+                        </div>
+
+                    </div>
+                    <div class="main-flex">
+                        <div class="signup-form bg-gray">
+                                <div class="signup-content">
+                                 
+                                   
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+           
+
+          
+        </div>
+
+    </div>
+
+
+
+</body>
+
+
+</html>
